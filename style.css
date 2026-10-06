@@ -1,0 +1,118 @@
+/* .active {
+    color: rgb(197, 22, 22);
+    background-color: rgb(68, 0, 255);
+}
+.active2 {
+    color: rgb(22, 197, 31);
+    background-color: rgb(223, 220, 232);
+} */
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.green {
+    background-color: green;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.btn {
+    padding: 30px 60px;
+    font-size: 30px;
+    border-radius: 20px;
+      
+}
+.text{
+     padding: 30px 60px;
+    font-size: 0px;
+
+
+}
+
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li small {
+    display: block;
+    margin-top: 5px;
+    font-size: 12px;
+    opacity: 0.6;
+}
+
+.myText {
+    color: rgb(18, 18, 18);
+     padding: 30px 160px;
+    font-size: 30px;
+    background-color: rgb(206, 168, 217);
+}
+/* .done {
+    text-decoration: line-through;
+} */
+.done::after {
+    content: " ✓";
+}
+
+.deleteBtn,
+.editBtn {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+.deleteBtn {
+    background-color: crimson;
+    color: white;
+}
+
+.editBtn {
+    background-color: royalblue;
+    color: white;
+}
+.filter-buttons {
+    display: flex;
+    gap: 10px;
+    margin: 20px;
+}
+
+.filter-buttons button {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.filter-buttons button:hover {
+    transform: scale(1.05);
+}
+.stats {
+    display: flex;
+    gap: 15px;
+    margin: 2px 0;
+}
+
+.stats p {
+    background-color: rgb(208, 199, 199);
+    padding: 10px 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+}
