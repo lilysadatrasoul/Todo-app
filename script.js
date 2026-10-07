@@ -486,6 +486,8 @@ deleteBtn.addEventListener("click", (event) => {
 
         saveTasks();
         updateCount();
+        updateCountDone();
+        updateCountPending();
         li.remove();
 });
 
@@ -609,6 +611,7 @@ function renderCurrentFilter() {
 clearBtn.addEventListener("click", () => {
     tasks = [];
 
+    currentFilter = "all";
     saveTasks();
 
     list.innerHTML = "";
@@ -647,7 +650,7 @@ sortBtn.addEventListener("click", () => {///مرتب کردن اعضای یک آ
 tasks.sort((a, b) => a.done - b.done);///سورت پندینگ بالا انجام شده پایین
 //tasks.sort((a, b) => b.done - a.done);/////سورت انجام شده بالا و پندینگ پایین
  saveTasks();    
-renderTasks(tasks);
+renderCurrentFilter();
 });
 
 
@@ -677,8 +680,12 @@ function addTask() {
     saveTasks();///////ذخیره در localStorage
 
     updateCount();
+    updateCountPending();
 
-    createTaskElement(newTask);/////// نمایش روی صفحه
+    renderCurrentFilter();
+
+    // /*createTaskElement(newTask)*/;/////// نمایش روی صفحه/ حذف کردیم
+    //  چون در تابع رندر کارنت فیلتر  تا بع رندر یعنی نمایش داریم
 
     inp.value = "";
 
